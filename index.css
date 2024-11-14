@@ -296,6 +296,7 @@ select{
     margin: 0;
     background:hsl(var(--clr-white) /0.05);
     backdrop-filter: blur(1.5rem);
+    color: hsl(var(--clr-dark)/1);
 }
 
 .primary-navigation a{
@@ -303,7 +304,7 @@ select{
 }
 .primary-navigation a > span{
     font-weight: 700;
-    margin-right: 0.2em;
+    margin-right: 0.1em;
 }
 .mobile-nav-toggle{
     display: none;
@@ -328,6 +329,7 @@ select{
         z-index: 1000;
         transform: translateX(100%);
         transition: transform 500ms ease-in-out;
+        color: hsl(var(--clr-dark)/1);
     }
 
     .primary-navigation.underline-indicator >.active{
@@ -368,6 +370,9 @@ select{
 }
 
 @media(min-width:35rem) and (max-width:44.9999rem){
+    .primary-navigation{
+        margin-block: 1rem 1.5rem;
+    }
     .primary-navigation a>span{
         display: none;
     }
@@ -392,12 +397,12 @@ select{
         order: 2;
     }
     .primary-navigation{
-        margin-block: 2rem;
+        margin-block: 1rem 1.5rem;
     }
 }
 
 .underline-indicator >*{
-    padding: var(--underline-gap,.55rem) 0;
+    padding: var(--underline-gap,.5rem) 0;
     border: 0;
     cursor: pointer;
     border-bottom: 0.2rem solid hsl(var(--clr-white) /0);
@@ -414,7 +419,7 @@ select{
 }
 
 .tab-list{
-    --gap:2rem;
+    --gap:1rem;
 }
 
 .dot-indicators > *{
@@ -473,8 +478,9 @@ select{
 
 /* home page */
 body{
-    background-size: cover;
-    background-position: bottom center;
+    background-size:cover;
+    background-position:center center;
+    background-attachment: fixed;
 }
 .home{
     background-image: url(./assets/home/background-home-mobile.jpg);
@@ -632,11 +638,11 @@ body{
 @media (min-width:45em){
     .grid-container{
         text-align: left;
-        column-gap: var(--container-gap,2rem);
+        column-gap: var(--container-gap,2.5rem);
         grid-template-columns: minmax(1rem,1fr) repeat(2,minmax(0,30rem)) minmax(1rem,1fr);
     }
     .grid-container--home {
-        padding-bottom: max(6rem, 20vh);
+        /* padding-bottom: max(6rem, 20vh); */
         align-items: end;
     }
     .grid-container--home >*:first-child{
@@ -671,7 +677,7 @@ body{
     .grid-container--crew>.dot-indicators{
         justify-content: start;
     }
-    /* .grid-container--crew > img{
+    .grid-container--crew > img{
         align-self: end;
-    } */
+    }
 }
