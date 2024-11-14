@@ -576,7 +576,7 @@ body{
     'tabs'
     'info';
 }
-.grid-container--destination > img{
+.grid-container--destination > picture{
     grid-area: image;
     max-width: 50%;
     margin-top: 0;
@@ -616,7 +616,7 @@ body{
     'tabs'
     'info';
 }
-.grid-container--crew > img{
+.grid-container--crew > picture{
     grid-area: image;
     max-width: 50%;
     align-self: flex-start;
@@ -687,8 +687,8 @@ body{
             '. title tabs .'
             '. image info .';
     }
-    .grid-container--destination > img,
-    .grid-container--crew > img{
+    .grid-container--destination > picture,
+    .grid-container--crew > picture{
         max-width: 70%;
     }
 
@@ -706,7 +706,7 @@ body{
         justify-content: end;
         margin-bottom: 1rem;
     }
-    .grid-container--crew > img{
+    .grid-container--crew > picture{
         align-self: end;
         
     }
