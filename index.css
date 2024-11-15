@@ -689,7 +689,7 @@ body{
     }
     .grid-container--destination > picture,
     .grid-container--crew > picture{
-        max-width: 70%;
+        max-width: 60%;
     }
 
     .destination-meta{
