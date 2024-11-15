@@ -675,20 +675,22 @@ body{
     'info';
 }
 .grid-container--tech > picture{
-    
     grid-area: image;
-    width: 100vw;
-    margin-inline: 0;
+    width: 100%;
+    object-fit:cover;
     
 }
 .grid-container--tech > .number-indicators{
-    
     grid-area: tabs;
     flex-direction: row;
     align-self: center;
     justify-content: center;
-
-
+}
+.potrait{
+    display: none;
+}
+.landscape{
+    display: block;
 }
 .grid-container--tech > .tech-info{
     
@@ -755,11 +757,14 @@ body{
         'info';
     }
     .grid-container--tech > picture{
-        
         grid-area: image;
         width: 100vw;
-
-        
+    }
+    .potrait{
+        display: none;
+    }
+    .landscape{
+        display: block;
     }
     .grid-container--tech > .number-indicators{
         
@@ -812,6 +817,7 @@ body{
     .grid-container--home >*:last-child{
         grid-column: 3;
     }
+
     .grid-container--destination {
         justify-items: start;
         align-content: start;
@@ -820,14 +826,36 @@ body{
             '. image info .';
     }
     .grid-container--destination > picture{
+        max-width: 60%;
+    }
+    .potrait{
+        display:block;
+    }
+    .landscape{
+        display: none;
+    }
+    .grid-container--destination > .tab-list{
+        grid-area: tabs;
+        align-self: flex-start;
         margin-top: 0.5rem;
-        max-width: 70%;
+    
+    }
+    .grid-container--destination > .destination-info{
+        grid-area: info;
+        align-self: flex-start;
+    }
+    
+    .destination-meta{
+        flex-direction: row;
+        border-top: 1px solid hsl(var(--clr-white) /.2);
+        margin-top: 0.5rem;
+    }
+    
+    .destination-meta p {
+        font-size: 1.2rem;    
     }
 
-    .destination-meta{
-        justify-content: start;
-        --gap:min(6vw,6rem);
-    }
+
     .grid-container--crew{
         justify-items: start;
         grid-template-columns: minmax(1rem,1fr) minmax(0,39rem) minmax(0,21rem) minmax(1rem,1fr);
@@ -849,19 +877,18 @@ body{
         text-align: left;
         grid-template-columns: minmax(1rem,1fr) minmax(0,40rem) minmax(0,40rem);
         grid-template-areas:
-        'title title title'
+        'title title image'
         'tabs info image';
     }
     .numbered-title{
         
         margin-top: 0;
-        padding: 1rem;
         margin-left: 6rem;
     }
     .grid-container--tech > picture{
         grid-area: image;
-        width: 100%;
-        height: 80%;
+        width: 70%;
+        justify-self: flex-end;
         
     }
     .grid-container--tech > .number-indicators{

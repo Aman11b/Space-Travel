@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
   <!-- custom css -->
   <link rel="stylesheet" href="index.css">
-  <script src="navigation.js" defer></script>
   <script src="tabs.js" defer></script>
+  <script src="navigation.js" defer></script>
 
   
   <title>Frontend Mentor | Space tourism website</title>
@@ -27,13 +27,21 @@
     <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
     <!-- navigation -->
     <nav>
-        <ul id="primary-navigation" data-visible="" class="primary-navigation underline-indicator flex " style="--gap:4rem">
-            <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span> Home</a></li>
-            <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span> Destination</a></li>
-            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span> Crew</a></li>
-            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span> Technology</a></li>
-        </ul>
-    </nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicator flex " style="--gap:4rem">
+          <li >
+            <a class="ff-sans-cond uppercase letter-spacing-2" href="index.html"><span aria-hidden="true">00</span> Home</a>
+          </li>
+          <li class="active">
+            <a class="ff-sans-cond uppercase  letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span> Destination</a>
+          </li>
+          <li>
+            <a class="ff-sans-cond uppercase  letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span> Crew</a>
+          </li>
+          <li>
+            <a class="ff-sans-cond uppercase  letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span> Technology</a>
+          </li>
+      </ul>
+  </nav>
   </header>
 
 
@@ -65,7 +73,7 @@
       <img src="assets/destination/image-titan.png" alt="the Titan">
     </picture>
 
-
+    <!-- tablist -->
     <div class="tab-list  underline-indicator flex " role="tablist" aria-label="destination">
       <button 
       aria-selected="true" 
@@ -75,8 +83,11 @@
       data-image="Moon-image">Moon</button>
       
       <button aria-selected="false" aria-controls="Mars-tab" role="tab" class="uppercase role='tab' text-accent letter-spacing-2  ff-sans-cond " tabindex="-1" data-image="Mars-image">Mars</button>
+
       <button aria-selected="false" aria-controls="Europa-tab" role="tab" class="uppercase role='tab' text-accent letter-spacing-2  ff-sans-cond " tabindex="-1" data-image="Europa-image">Europa</button>
+
       <button aria-selected="false" aria-controls="Titan-tab" role="tab" class="uppercase  text-accent letter-spacing-2  ff-sans-cond " tabindex="-1" data-image="Titan-image">Titan</button>
+      
     </div>
 
     <!-- moon -->
