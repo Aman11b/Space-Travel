@@ -411,9 +411,9 @@ select{
 }
 
 .underline-indicator >*{
-    padding: var(--underline-gap,.5rem) 0;
+    /* padding: var(--underline-gap,.5rem) 0; */
     border: 0;
-    cursor: pointer;
+    /* cursor: pointer; */
     border-bottom: 0.2rem solid hsl(var(--clr-white) /0);
     background-color: transparent;
     margin: 0;
