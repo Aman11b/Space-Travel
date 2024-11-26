@@ -1,4 +1,4 @@
-## 🚀 Navigation & Tab-Switching Project
+## 🚀 Space-Travel(Design System)
 
 Welcome to my project focused on navigation and tab-switching logic! Inspired by a video from freeCodeCamp featuring the CSS Guru Ji, Kevin Powell, this project has been a transformative journey into the art of web development.
 
